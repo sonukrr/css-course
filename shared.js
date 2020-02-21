@@ -4,8 +4,13 @@ var modalNoButton = document.querySelector(".modal__action--negative");
 var selectPlanButtons = document.querySelectorAll(".plan button");
 var toggleButton = document.querySelector(".toggle-button");
 var mobileNav = document.querySelector(".mobile-nav");
-var ctaButton = document.querySelector(".main-nav__item--cta")
-    // console.dir(backdrop.style['background-image']);
+var ctaButton = document.querySelector(".main-nav__item--cta");
+var modalOkayButton = document.querySelector(".modal__action__btn");
+var signupForm = document.querySelector(".signup-form");
+var signupButton = document.querySelector(".signup_btn");
+
+
+// console.dir(backdrop.style['background-image']);
 
 // console.dir(backdrop);
 for (var i = 0; i < selectPlanButtons.length; i++) {
@@ -60,14 +65,37 @@ toggleButton.addEventListener("click", function() {
     }, 200);
 });
 
-ctaButton.addEventListener('animationstart', function() {
-    console.log("animation started", event);
-})
+// ctaButton.addEventListener('animationstart', function() {
+//     console.log("animation started", event);
+// });
 
-ctaButton.addEventListener('animationend', function() {
-    console.log("animation ended", event);
-})
+// ctaButton.addEventListener('animationend', function() {
+//     console.log("animation ended", event);
+// });
 
-ctaButton.addEventListener('animationiteration', function() {
-    console.log("animation iteration", event);
-})
+// ctaButton.addEventListener('animationiteration', function() {
+//     console.log("animation iteration", event);
+// });
+
+signupButton.addEventListener('click', function() {
+
+    backdrop.classList.add('open');
+    modal.classList.add('open');
+});
+
+modalOkayButton.addEventListener('click', function() {
+    console.log("form button clicked");
+    backdrop.classList.remove('open');
+    modal.classList.remove('open');
+});
+
+signupForm.children[10].addEventListener('click', function() {
+    var firstName = document.querySelector('#first-name');
+    var lastName = document.querySelector('#last-name');
+    var email = document.querySelector('#email');
+    var password = document.querySelector('#password');
+
+    if (firstName.checkValidity() && lastName.checkValidity() && email.checkValidity() && password.checkValidity()) {
+        signupButton.disabled = false;
+    }
+});

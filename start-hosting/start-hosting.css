@@ -72,8 +72,48 @@ main {
     background: #faacac;
 }
 
-.signup-form button[type="submit"] {
+
+/* .signup-form button[type="submit"] {
     display: block;
+} */
+
+.modal {
+    width: 400px;
+    height: 200px;
+    background: rgb(203, 226, 203);
+    text-align: center;
+    z-index: 100;
+    display: none;
+    border: 2px solid orange;
+    border-radius: 1rem;
+    box-shadow: 10px 5px 5px black;
+    margin: 10% auto;
+}
+
+.modal__title {
+    color: green;
+}
+
+.modal__actions {
+    display: inline-block;
+}
+
+.modal__action__btn {
+    background: rgb(85, 231, 85);
+    color: whitesmoke;
+    border: 2px solid green;
+    width: 6rem;
+    height: 2rem;
+    border-radius: 0.4rem;
+    font-size: 1rem;
+}
+
+.modal__action__btn:hover {
+    cursor: pointer;
+    background: whitesmoke;
+    color: rgb(85, 231, 85);
+    font: inherit;
+    box-shadow: 3px 3px 2px black;
 }
 
 @media (min-width: 40rem) {

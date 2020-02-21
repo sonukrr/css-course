@@ -14,6 +14,12 @@
 
 <body>
     <div class="backdrop"></div>
+    <div class="modal">
+        <h1 class="modal__title">Successfully activated selected plan</h1>
+        <div class="modal__actions">
+            <button class="modal__action__btn " type="button">Okay</button>
+        </div>
+    </div>
     <header class="main-header">
         <div>
             <button class="toggle-button">
@@ -54,7 +60,7 @@
     </nav>
     <main class="signup-page">
         <h1 class="signup-title">Awesome! Let's dive right in!</h1>
-        <form action="index.html" class="signup-form">
+        <form class="signup-form">
             <label for="title">Title</label>
             <select id="title">
                 <option value="mr">Mr.</option>
@@ -74,7 +80,7 @@
                 <a href="#">Terms &amp; Conditions</a>
             </label>
             </div>
-            <button type="submit" class="button" disabled>Sign Up</button>
+            <button type="button" class="button signup_btn" disabled>Sign Up</button>
         </form>
     </main>
     <footer class="main-footer">
